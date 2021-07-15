@@ -22,7 +22,7 @@ export const Login = props => {
         existingUserCheck()
             .then(exists => {
                 if (exists) {
-                    localStorage.setItem("kennel_customer", exists.id)
+                    localStorage.setItem("kandy_customer", exists.id)
                     history.push("/")
                 } else {
                     existDialog.current.showModal()
@@ -39,7 +39,7 @@ export const Login = props => {
 
             <section>
                 <form className="form--login" onSubmit={handleLogin}>
-                    <h1>Nashville Kennels</h1>
+                    <h1>Kandy Korner</h1>
                     <h2>Please sign in</h2>
                     <fieldset>
                         <label htmlFor="inputEmail"> Email address </label>
@@ -57,7 +57,7 @@ export const Login = props => {
                 </form>
             </section>
             <section className="link--register">
-                <Link to="/register">Not a member yet?</Link>
+                <Link to="/register">New Customer? Click HERE</Link>
             </section>
         </main>
     )
